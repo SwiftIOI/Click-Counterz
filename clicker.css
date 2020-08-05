@@ -1,0 +1,29 @@
+#result {
+	text-align: center;
+	font-size: 25px;
+	font-family: 'Comic Sans MS';
+}
+
+#button {
+	text-align: center;
+	font-size: 75px;
+	font-family: 'Comic Sans MS';
+}
+
+p.button:hover {
+	text-decoration: none;
+	background-color: #6d84b4;
+	color: #ffffff;
+}
+
+#question {
+	text-align: center;
+	font-size: 50px;
+	font-family: 'Comic Sans MS';
+}
+
+#question2 {
+	text-align: center;
+	font-size: 25px;
+	font-family: 'Comic Sans MS';
+}

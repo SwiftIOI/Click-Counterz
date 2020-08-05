@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--Click Counterz made by: Nicholas Miller-->
+<title>Click Counterz | How many times can you click?</title>
+<link rel="shortcut icon" type="image/png" href="./click.png">
+<link rel="stylesheet" type="text/css" href="./clicker.css">
+<script>
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (sessionStorage.clickcount) {
+      sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+    } else {
+      sessionStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+</script>
+</head>
+<!--If you are reading this, you must know someone who is click friendly-->
+<body>
+<div id="question">
+  <p>Click Friendly?<p>
+</p>
+<div id="question2" class="button">
+  <p>See how many time(s) you can click the button.</p>
+</div>
+<div id="button">
+<p><button onclick="clickCounter()" type="button" style="width: 150px;font-size: xx-large;height: 100px;background-color: #3b5998;color: white;font-style: italic;">Click me!</button></p>
+</div>
+<div id="result">
+<p>Click the button to see the counter increase.</p>
+<p>Close the browser tab (or window), and try again, and the counter is reset.</p>
+
+</div>
+</body>
+</html>
